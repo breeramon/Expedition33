@@ -48,9 +48,8 @@ const pt = {
     title: 'Sobre mim',
     photoAlt: 'Retrato de Breno Ramon sorrindo, de camiseta preta e com o polegar levantado.',
     paragraphs: [
-      'Sou formado em Ciência da Computação pela UNIT, em Aracaju (SE), e trabalho com desenvolvimento fullstack. Comecei como estagiário na SSP/SE, fui promovido a desenvolvedor full-stack e tenho experiência também na Indra/Minsait.',
-      'No dia a dia uso C#/.NET, Entity Framework, AngularJS e SQL Server para manter e evoluir sistemas existentes. Fora do trabalho, exploro visão computacional e mobile: meu TCC, o VozGuia, tirou nota 10 na defesa.',
-      'Estou em busca da próxima vaga como desenvolvedor fullstack, de preferência com .NET e Angular.',
+      'Sou formado em Ciência da Computação pela UNIT, em Aracaju (SE), e estou fazendo uma Pós Graduação em Análise de Dados e Inteligência Artificial. Na minha carreira profissional comecei como estagiário de desenvolvimento no Departamento de Tecnologia da Secretaria de Segurança Pública de Sergipe (SSP/SE), fui promovido a desenvolvedor full-stack em 2024 na Indra/Minsait e em 2026 virei Analista de Desenvolvimento na própria Indra/Minsait.',
+      'No dia a dia uso C#/.NET, Entity Framework, AngularJS, React e SQL Server para manter e evoluir sistemas existentes. Fora do trabalho, exploro visão computacional e mobile: meu TCC, o VozGuia, tirou nota 10 na defesa.'
     ],
   },
   journey: {
@@ -184,9 +183,8 @@ const en: Copy = {
     title: 'About me',
     photoAlt: 'Portrait of Breno Ramon smiling, wearing a black t-shirt and giving a thumbs up.',
     paragraphs: [
-      'I hold a Computer Science degree from UNIT, in Aracaju (SE, Brazil), and work in fullstack development. I started as an intern at SSP/SE, was promoted to full-stack developer, and I also have experience at Indra/Minsait.',
-      'Day to day I use C#/.NET, Entity Framework, AngularJS and SQL Server to maintain and evolve existing systems. Outside work I explore computer vision and mobile: my thesis project, VozGuia, earned a perfect 10 at its defense.',
-      "I'm looking for my next role as a fullstack developer, preferably with .NET and Angular.",
+      'I hold a degree in Computer Science from UNIT in Aracaju (SE) and am currently pursuing a postgraduate degree in Data Analysis and Artificial Intelligence. My professional career began with a development internship at the Technology Department of the Sergipe Public Security Secretariat (SSP/SE); I was promoted to full-stack developer at Indra/Minsait in 2024 and became a Development Analyst at the same company in 2026.',
+      'In my day-to-day work, I use C#/.NET, Entity Framework, AngularJS, React, and SQL Server to maintain and enhance existing systems. Outside of work, I explore computer vision and mobile development; my capstone project, VozGuia, received a perfect score during its defense.',
     ],
   },
   journey: {
