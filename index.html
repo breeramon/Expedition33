@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breno Ramon | Portfólio</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <audio id="trilha-sonora" src="/assets/audio/musicExpedition33.mp3" loop></audio>
+    <nav class="navegacao">
+        <div class="controles-audio">
+            <button id="controle-musica" class="botao-musica">
+                <i class="fa-solid fa-volume-xmark"></i> 
+            </button>
+            <input type="range" id="controle-volume" class="slider-volume" min="0" max="1" step="0.01" value="0.2">
+        </div>
+
+        <ul class="menu">
+            <li><a href="#inicio">INÍCIO</a></li>
+            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="#projetos">PROJETOS</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">CONTATO <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.instagram.com/breenoramon_/" target="_blank">Instagram</a><li>
+                    <li><a href="http://www.linkedin.com/in/breno-ramon-018a05233" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/breeramon" target="_blank">GitHub</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <div class="hero-content">
+                <h1 class="hero-title">Breno Ramon</h1>
+                <h2>Desenvolvedor FullStack</h2>
+                <p class="hero-subtitle">Uma jornada transformando ideias em experiências digitais incríveis.</p>
+                <a href="#projetos" class="hero-cta">Ver a Expedição</a>
+            </div>
+            </section>
+
+        <section id="sobre">
+            <h2 class="section-title" data-aos="fade-down">Sobre Mim</h2>
+
+            <div class="sobre-container">
+                <div class="sobre-foto" data-aos="fade-right" data-aos-duration="800">
+                    <img src="assets/audio/imagens/fotoPortfolio.jpeg" alt="Foto de Breno Ramon">
+                </div>
+                
+                <div class="sobre-texto" data-aos="fade-left" data-aos-duration="800">
+                    <p>
+                        Olá! Minha expedição no universo da tecnologia começou em [ano], movida por uma paixão por resolver quebra-cabeças complexos e construir coisas incríveis a partir do zero. Atualmente, como estudante de Ciência da Computação, cada projeto é uma nova fronteira a ser explorada.
+                    </p>
+                    <p>
+                        Estou constantemente aprimorando meu arsenal com novas tecnologias, sempre em busca de criar soluções que não apenas funcionem, mas que também proporcionem uma experiência memorável.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title" data-aos="fade-up">Hard Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-brands fa-react"></i>
+                    <span>React</span>
+                </div>
+            </div>
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-item">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="devicon-csharp-plain"></i>
+                    <span>C#</span>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="700">
+                    <i class="devicon-dotnetcore-plain"></i>
+                    <span>.NET</span>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="800">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2 class="section-title" data-aos="fade-down">Projetos</h2>
+
+            <div class="projetos-grid">
+
+                <div class="projeto-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="projeto-imagem">
+                        <a href="#" target="_blank">
+                            <img src="assets/images/projeto1.jpg" alt="Preview do Projeto 1">
+                        </a>
+                    </div>
+                    <div class="projeto-conteudo">
+                        <h3 class="projeto-titulo">Nome do Projeto Incrível</h3>
+                        <p class="projeto-descricao">
+                            Uma breve descrição sobre o que este projeto faz, qual problema ele resolve e o principal desafio que você superou durante o desenvolvimento.
+                        </p>
+                        <ul class="projeto-tecnologias">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>CSS</li>
+                        </ul>
+                        <div class="projeto-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="projeto-imagem">
+                        <a href="#" target="_blank">
+                            <img src="assets/images/projeto2.jpg" alt="Preview do Projeto 2">
+                        </a>
+                    </div>
+                    <div class="projeto-conteudo">
+                        <h3 class="projeto-titulo">Outro Projeto Fantástico</h3>
+                        <p class="projeto-descricao">
+                            Aqui você descreve outro projeto, talvez com tecnologias diferentes, mostrando a variedade do seu conhecimento e sua capacidade de aprender.
+                        </p>
+                        <ul class="projeto-tecnologias">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="projeto-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="contato">
+            
+        </section>
+    </main>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

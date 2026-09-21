@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de Cores Inspirada em Expedition 33 */
+    --cor-fundo: #0A192F; 
+    --cor-fundo2: #000000;
+    --cor-texto-principal: #CCD6F6; /* Cinza azulado claro, para textos */
+    --cor-texto-secundario: #8892b0; /* Cinza azulado mais escuro */
+    --cor-destaque: #FFD700;     /* Dourado, para títulos e links */
+    --cor-destaque-hover: #DAA520; /* Dourado mais escuro para hover */
+    --cor-destaque-escura: #bda000; /* Dourado bem escuro para detalhes */
+
+    /* Tipografia */
+    --font-titulo: 'MedievalSharp', cursive;
+    --font-corpo: 'MedievalSharp', cursive;
+    --font-detalhe: 'MedievalSharp', cursive;
+    --font-logo: 'MedievalSharp', cursive;
+
+    --transicao-suave: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+body {
+    background-color: var(--cor-fundo2);
+    color: var(--cor-texto-principal);
+    font-family: var(--font-corpo); 
+    font-size: 18px; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================= */
+/* ESTILO DA NAVEGAÇÃO            */
+/* ============================================= */
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.851);
+    backdrop-filter: blur(10px); 
+    z-index: 10;
+    display: flex;
+
+    align-items: center;
+}
+
+.menu {
+    list-style: none; 
+    display: flex; 
+    gap: 70px;
+    margin: 0 auto;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cor-destaque-escura);
+    font-family: var(--font-corpo);
+    font-size: 18px;
+    padding-bottom: 5px;
+    position: relative;
+    transition: var(--transicao-suave);
+}
+
+.menu a:hover {
+    color: var(--cor-destaque-hover);
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-destaque-hover);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle .fa-caret-down {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.85);
+
+    list-style: none;
+    padding-left: 0; 
+    border-radius: 4px;
+    width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu a {
+    font-family: 'MedievalSharp', cursive;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--cor-destaque-hover);
+    justify-content: center; 
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.dropdown.active .dropdown-menu {
+    top: 120%; /* Posição final para animação (efeito de "cair") */
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown.active .dropdown-toggle .fa-caret-down {
+    transform: rotate(180deg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
+    color: var(--cor-destaque-escura);
+    font-weight: 700;
+}
+
+/* ============================================= */
+/* ESTILO DO CONTROLE DE MÚSICA        */
+/* ============================================= */
+
+.botao-musica {
+    background: none;
+    border: 1px solid var(--cor-destaque-escura);
+    color: var(--cor-destaque-escura);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transicao-suave);
+}
+
+.botao-musica:hover {
+    color: var(--cor-destaque-escura);
+    border-color: var(--cor-destaque-escura);
+    transform: scale(1.1);
+}
+
+.controles-audio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider-volume {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px; /* Largura do slider */
+    height: 4px; /* Altura da "trilha" */
+    background: var(--cor-texto-secundario);
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.slider-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--cor-destaque-escura);
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out;
+}
+
+.slider-volume::-webkit-slider-thumb:hover {
+    background: var(--cor-destaque-escura);
+}
+
+/* Estilo do "polegar" para Firefox */
+.slider-volume::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--cor-destaque-escura);
+    border-radius: 50%;
+    border: none;
+    transition: background 0.2s ease-in-out;
+}
+
+.slider-volume::-moz-range-thumb:hover {
+    background: var(--cor-destaque-escura);
+}
+
+#inicio {
+    height: 100vh; /* Faz a seção ocupar 100% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* EFEITO DE FUNDO COMPOSTO */
+    /* Lembre-se de achar uma imagem de fundo escura e temática! */
+    background-image: 
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.9) 100%),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('/assets/audio/imagens/expedition33FOTO.png');
+    
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    text-align: center;
+    /* Animação sutil de fade-in quando a página carrega */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-title {
+    font-family: var(--font-logo);
+    font-size: clamp(40px, 8vw, 110px); /* Tamanho de fonte responsivo */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+}
+
+.hero-subtitle {
+    font-size: clamp(16px, 3vw, 22px);
+    font-family: var(--font-corpo);
+    color: var(--cor-texto-secundario);
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-cta {
+    display: inline-block;
+    font-family: var(--font-titulo);
+    font-size: 18px;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid var(--cor-destaque);
+    padding: 12px 30px;
+    transition: var(--transicao-suave);
+
+    /* Efeito de background sutil */
+    background: linear-gradient(to top, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0));
+}
+
+.hero-cta:hover {
+    background-color: rgba(255, 215, 0, 0.15);
+    color: var(--cor-destaque-hover);
+    border-color: var(--cor-destaque-hover);
+    transform: scale(1.05);
+}
+
+#sobre {
+    /* Espaçamento interno e largura máxima para legibilidade */
+    padding: 100px 50px;
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+/* Título de Seção Decorativo */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    position: relative; /* Necessário para as linhas decorativas */
+}
+
+/* Linhas decorativas ao lado do título */
+.section-title::before,
+.section-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: var(--cor-destaque);
+    opacity: 0.4;
+}
+
+.section-title::before {
+    left: 25%; /* Ajuste conforme necessário */
+}
+
+.section-title::after {
+    right: 25%; /* Ajuste conforme necessário */
+}
+
+
+/* Layout de 2 colunas */
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Texto ocupa 2/3, foto 1/3 */
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.sobre-texto p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    margin-bottom: 20px;
+}
+
+.sobre-foto {
+    position: relative;
+    padding: 3px; /* Cria um espaço para a borda externa */
+    box-sizing: border-box;
+    background: var(--cor-fundo); /* Cor de fundo da "moldura" */
+    border-radius: 6px; /* Um pouco maior que o da imagem */
+    overflow: hidden; /* Esconde o excesso da animação */
+}
+
+.sobre-foto img {
+    width: 100%;
+    border-radius: 4px; /* Borda interna levemente arredondada */
+    filter: saturate(0.8) contrast(1.1);
+    display: block; /* Remove espaços extras */
+    position: relative; /* Garante que a imagem fique por cima */
+    z-index: 2;
+    background: var(--cor-fundo2); /* Fundo para garantir que cubra a animação */
+    border: none; /* Remove a borda estática */
+}
+
+.sobre-foto::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%; /* Deixa o pseudo-elemento bem grande */
+    height: 200%;
+    z-index: 1;
+    background: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        var(--cor-destaque-escura) /* A cor da sua borda animada */
+    );
+    animation: rotate 8s linear infinite;
+}
+
+/* Grid de Habilidades */
+.subsection-title {
+    text-align: center;
+    font-size: 24px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 30px;
+    font-family: var(--font-titulo);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    background-color: rgba(17, 17, 17, 0.5);
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-family: var(--font-detalhe); /* Usa a Google Sans Code */
+    color: var(--cor-texto-secundario);
+    transition: var(--transicao-suave);
+}
+
+.skill-item i {
+    font-size: 36px;
+    color: var(--cor-destaque);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+
+/* ============================================= */
+/* SEÇÃO PROJETOS                                */
+/* ============================================= */
+
+#projetos {
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-grid {
+    display: grid;
+    /* Cria colunas que se ajustam, com no mínimo 300px de largura */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card {
+    background-color: rgba(17, 17, 17, 0.5); /* Fundo semi-transparente */
+    border: 1px solid #222;
+    border-radius: 6px;
+    overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+    display: flex;
+    flex-direction: column; /* Organiza o card verticalmente */
+    transition: var(--transicao-suave);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px); /* Efeito de "levantar" o card */
+    border-color: var(--cor-destaque);
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block;
+    filter: grayscale(30%);
+    transition: var(--transicao-suave);
+}
+
+.projeto-card:hover .projeto-imagem img {
+    filter: grayscale(0%);
+}
+
+.projeto-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz esta área crescer para ocupar o espaço disponível */
+}
+
+.projeto-titulo {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--cor-texto-principal);
+}
+
+.projeto-descricao {
+    color: var(--cor-texto-secundario);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empurra a lista de tecnologias para o final */
+}
+
+.projeto-tecnologias {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.projeto-tecnologias li {
+    font-family: var(--font-detalhe); /* Usa a Google Sans Code */
+    font-size: 14px;
+    color: var(--cor-destaque);
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.projeto-links {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.projeto-links a {
+    color: var(--cor-texto-secundario);
+    transition: var(--transicao-suave);
+}
+
+.projeto-links a:hover {
+    color: var(--cor-destaque);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes para a animação da borda */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
