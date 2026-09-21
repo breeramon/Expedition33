@@ -25,16 +25,16 @@ export const projects: ProjectMeta[] = [
     id: 'vozguia',
     featured: true,
     icon: FaEye,
-    links: {},
+    links: {repo: 'https://github.com/breeramon/TCC_VisaoComputacional'},
   },
   {
     id: 'ssim',
     icon: FaImage,
-    links: {},
+    links: {repo: 'https://github.com/breeramon/Processamento_de_Imagens_E02_Grupo6'},
   },
   {
     id: 'ordem',
     icon: FaDiceD20,
-    links: {},
+    links: {demo: 'https://breusrpg.vercel.app', repo: 'https://github.com/breeramon/DadosRPG'},
   },
 ]

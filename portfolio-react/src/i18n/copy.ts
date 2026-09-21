@@ -118,7 +118,7 @@ const pt = {
         kicker: 'Site · RPG de mesa',
         title: 'Ficha de Ordem Paranormal',
         description: 'Site de ficha de personagem para o RPG de mesa Ordem Paranormal.',
-        tags: ['RPG de mesa', 'Ordem Paranormal'],
+        tags: ['React', 'Vite', 'Tailwind', 'RPG', 'Ordem Paranormal'],
       },
     },
   },
