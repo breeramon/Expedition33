@@ -1,8 +1,6 @@
 # Portfólio · Breno Ramon — tema Clair Obscur: Expedition 33
 
-Portfólio pessoal de **Breno Ramon**, desenvolvedor fullstack, com direção de arte inspirada em *Clair Obscur: Expedition 33* (Sandfall Interactive): noite, luz de lampião e tipografia de época. Construído em **React 19 + Vite + TypeScript + Tailwind CSS v4**, bilíngue (PT-BR/EN) e acessível (WCAG 2.1 AA).
-
-> Este é o único projeto ativo do repositório. A versão original em HTML/CSS/JS puro foi descontinuada e seus arquivos (e a mídia bruta que não era mais lida por nada) foram removidos — veja [Histórico](#histórico) no fim deste arquivo.
+Meu portfólio pessoal, Analista Desenvolvedor, com direção de arte inspirada em *Clair Obscur: Expedition 33* (Sandfall Interactive): noite, luz de lampião e tipografia de época. Construído em **React 19 + Vite + TypeScript + Tailwind CSS v4**, bilíngue (PT-BR/EN) e acessível (WCAG 2.1 AA).
 
 ## Como rodar
 
@@ -15,7 +13,7 @@ npm run preview  # serve o build de produção localmente
 npm run lint      # oxlint
 ```
 
-Sempre que `portfolio-react/package.json` mudar (uma dependência nova, por exemplo), rode `npm install` de novo antes do próximo `dev`/`build`.
+Sempre que `portfolio-react/package.json` mudar (uma dependência nova, por exemplo), rodar `npm install` de novo antes do próximo `dev`/`build`.
 
 ## Organização das pastas
 
@@ -99,5 +97,3 @@ Projeto de fã, sem fins comerciais. A arte e a trilha sonora de *Clair Obscur: 
 ## Histórico
 
 O portfólio começou como HTML, CSS e JavaScript puro. Ele foi totalmente reconstruído em React + Vite + TypeScript + Tailwind, mantendo o mesmo escopo (navegação com player de música, hero, sobre, projetos, contato) e adicionando o que a versão original não tinha: suporte a dois idiomas, seção de contato funcional, menu mobile e acessibilidade revisada.
-
-Na limpeza mais recente foram removidos: os arquivos antigos de HTML/CSS/JS da versão estática; a pasta `assets/` na raiz (a mídia original em alta resolução — já convertida e otimizada dentro de `portfolio-react/src/assets` e `portfolio-react/public/audio`, e não referenciada em nenhum lugar do código React); um `package-lock.json` vazio que tinha ficado na raiz por engano; e três dependências de fontes do scaffold inicial que não eram mais usadas em nenhum componente (`@fontsource-variable/bodoni-moda`, `@fontsource-variable/newsreader`, `@fontsource-variable/google-sans-code`).
