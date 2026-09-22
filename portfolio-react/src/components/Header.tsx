@@ -67,7 +67,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-5 sm:gap-4 sm:px-8">
         <a
           href="#inicio"
-          className="inline-flex min-h-11 items-center font-display text-lg italic text-toile transition-colors hover:text-dore-claro sm:text-xl"
+          className="inline-flex min-h-11 items-center font-display text-lg tracking-wide text-toile transition-colors hover:text-dore-claro sm:text-xl"
         >
           {site.name}
         </a>

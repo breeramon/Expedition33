@@ -111,11 +111,11 @@ export function Hero() {
           style={delay(220)}
         >
           <span className="block">{h.firstName}</span>{' '}
-          <span className="block font-medium italic text-dore-claro">{h.lastName}</span>
+          <span className="block font-medium text-dore-claro">{h.lastName}</span>
         </h1>
 
         <p
-          className="rise mt-6 font-display text-2xl italic text-toile/90 sm:text-3xl"
+          className="rise mt-6 font-voice text-2xl italic text-toile/90 sm:text-3xl"
           style={delay(380)}
         >
           {h.role}

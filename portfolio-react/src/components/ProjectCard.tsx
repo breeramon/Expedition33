@@ -102,7 +102,9 @@ export function ProjectCard({ project }: { project: ProjectMeta }) {
                   className="bg-nuit-2 px-5 py-5 [&:last-child:nth-child(odd)]:col-span-2 sm:[&:last-child:nth-child(odd)]:col-span-1 lg:[&:last-child:nth-child(odd)]:col-span-2"
                 >
                   <dt className="label text-cendre">{m.label}</dt>
-                  <dd className="sturdy mt-1 font-display text-3xl text-dore-claro">{m.value}</dd>
+                  <dd className="sturdy mt-1 font-mono text-3xl tracking-wide text-dore-claro">
+                    {m.value}
+                  </dd>
                 </div>
               ))}
             </dl>

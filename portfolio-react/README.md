@@ -37,7 +37,7 @@ src/
 ## Decisões de design
 
 - **Assinatura:** no hero, a arte fica na sombra e uma "lanterna" de luz segue o mouse (clair-obscur). Em telas de toque a luz fica fixa; com "reduzir movimento" ativo, ela acompanha o cursor sem suavização.
-- **Tipografia:** Bodoni Moda (títulos), Newsreader (texto), Google Sans Code (rótulos e código), todas auto-hospedadas via Fontsource.
+- **Tipografia:** o mesmo mapeamento por papel usado no próprio jogo, com as famílias gratuitas equivalentes (auto-hospedadas via Fontsource): **Cinzel** nos títulos e na logo, **IM Fell Double Pica** no corpo do texto, **Bebas Neue** nos rótulos, botões e números (métricas dos projetos) e **EB Garamond** itálico só no subtítulo do hero, no papel de "voz"/diálogo — o mesmo uso que tem nas cutscenes do jogo. (A fonte paga oficial dos títulos é a Trajan; Cinzel é a alternativa gratuita mais próxima.)
 - **Acessibilidade:** navegação por teclado, link "pular para o conteúdo", foco visível, `prefers-reduced-motion`, contraste ≥ 4,5:1 e alvos de toque ≥ 44 px.
 - **Áudio:** nunca toca sozinho e o arquivo (14 MB) só é baixado quando a pessoa aperta o botão.
 
