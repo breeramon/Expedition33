@@ -1,6 +1,6 @@
 # Portfólio · Breno Ramon — tema Clair Obscur: Expedition 33
 
-Meu portfólio pessoal, Analista Desenvolvedor, com direção de arte inspirada em *Clair Obscur: Expedition 33* (Sandfall Interactive): noite, luz de lampião e tipografia de época. Construído em **React 19 + Vite + TypeScript + Tailwind CSS v4**, bilíngue (PT-BR/EN) e acessível (WCAG 2.1 AA).
+Meu portfólio pessoal de Analista de Desenvolvimento, com direção de arte inspirada em *Clair Obscur: Expedition 33* (Sandfall Interactive): noite, luz de lampião e tipografia de época. Construído em **React 19 + Vite + TypeScript + Tailwind CSS v4**, bilíngue (PT-BR/EN) e acessível (WCAG 2.1 AA).
 
 ## Como rodar
 
@@ -86,13 +86,10 @@ Definidos em `src/data/projects.ts` (links e ícone) + `src/i18n/copy.ts` (títu
 - **Acessibilidade:** navegação por teclado, link "pular para o conteúdo", foco visível, `prefers-reduced-motion` respeitado em todas as animações, contraste de texto ≥ 4,5:1 (auditado) e alvos de toque ≥ 44 px.
 - **Áudio:** a trilha nunca toca sozinha e o arquivo (14 MB) só é baixado quando a pessoa aperta o botão de play.
 
-## Deploy (Vercel)
-
-Importe a pasta `portfolio-react` como o repositório/raiz do projeto na Vercel — o preset "Vite" detecta `npm run build` e a pasta `dist` automaticamente.
 
 ## Créditos
 
-Projeto de fã, sem fins comerciais. A arte e a trilha sonora de *Clair Obscur: Expedition 33* pertencem à Sandfall Interactive e a seus criadores. Antes de publicar publicamente, confirme se você tem direito de usá-las.
+Projeto de fã, sem fins comerciais. A arte e a trilha sonora de *Clair Obscur: Expedition 33* pertencem à Sandfall Interactive e a seus criadores.
 
 ## Histórico
 
