@@ -124,7 +124,7 @@ const pt = {
   },
   contact: {
     title: 'Contato',
-    lead: 'Estou em busca da próxima vaga como desenvolvedor fullstack, de preferência com .NET e Angular. Se o meu perfil combina com o seu time, escreva.',
+    lead: 'Estou em busca da próxima vaga como desenvolvedor. Se o meu perfil combina com o seu time, me envie uma mensagem.',
     email: 'Enviar e-mail',
     copyEmail: 'Copiar e-mail',
     copied: 'E-mail copiado',
