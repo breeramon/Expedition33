@@ -93,4 +93,4 @@ Projeto de fã, sem fins comerciais. A arte e a trilha sonora de *Clair Obscur: 
 
 ## Histórico
 
-O portfólio começou como HTML, CSS e JavaScript puro. Ele foi totalmente reconstruído em React + Vite + TypeScript + Tailwind, mantendo o mesmo escopo (navegação com player de música, hero, sobre, projetos, contato) e adicionando o que a versão original não tinha: suporte a dois idiomas, seção de contato funcional, menu mobile e acessibilidade revisada.
+O portfólio foi construído em React + Vite + TypeScript + Tailwind, tendo o escopo (navegação com player de música, hero, sobre, projetos, contato) + suporte a dois idiomas, seção de contato funcional, menu mobile e acessibilidade revisada.
