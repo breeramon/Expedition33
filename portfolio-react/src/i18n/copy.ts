@@ -38,7 +38,7 @@ const pt = {
     firstName: 'Breno',
     lastName: 'Ramon',
     role: 'Desenvolvedor fullstack',
-    lead: 'Construo sistemas web de ponta a ponta, do banco de dados à interface. No TCC, fui além: um app que anuncia em voz alta os objetos ao redor de quem não enxerga.',
+    lead: 'Construo sistemas web de ponta a ponta, do banco de dados à interface. Atuo como desenvolvedor e tenho muito interesse na parte de IA e mobile.',
     ctaProjects: 'Ver projetos',
     ctaContact: 'Falar comigo',
     stackLabel: 'Tecnologias principais',
@@ -48,8 +48,8 @@ const pt = {
     title: 'Sobre mim',
     photoAlt: 'Retrato de Breno Ramon sorrindo, de camiseta preta e com o polegar levantado.',
     paragraphs: [
-      'Sou formado em Ciência da Computação pela UNIT, em Aracaju (SE), e estou fazendo uma Pós Graduação em Análise de Dados e Inteligência Artificial. Na minha carreira profissional comecei como estagiário de desenvolvimento no Departamento de Tecnologia da Secretaria de Segurança Pública de Sergipe (SSP/SE), fui promovido a desenvolvedor full-stack em 2024 na Indra/Minsait e em 2026 virei Analista de Desenvolvimento na própria Indra/Minsait.',
-      'No dia a dia uso C#/.NET, Entity Framework, AngularJS, React e SQL Server para manter e evoluir sistemas existentes. Fora do trabalho, exploro visão computacional e mobile: meu TCC, o VozGuia, tirou nota 10 na defesa.'
+      'Sou formado em Ciência da Computação pela Universidade Tiradentes (UNIT), em Aracaju/Sergipe, e estou fazendo uma Pós Graduação em Análise de Dados e Inteligência Artificial. Na minha carreira profissional comecei como estagiário de desenvolvimento no Departamento de Tecnologia da Secretaria de Segurança Pública de Sergipe (SSP/SE), fui promovido a desenvolvedor full-stack em 2024 na Indra Group e em 2026 me tornei Analista de Desenvolvimento na própria Indra.',
+      'No dia a dia uso C#/.NET, Entity Framework, AngularJS, React e SQL Server para manter e evoluir sistemas existentes. Fora do trabalho, exploro visão computacional e desenvolvimento mobile, como por exemplo, o meu TCC, um aplicativo chamado VozGuia, que utiliza dessas tecnologias para auxiliar pessoas com deficiência visual em ambientes escolares e universitários.'
     ],
   },
   journey: {
@@ -173,7 +173,7 @@ const en: Copy = {
     firstName: 'Breno',
     lastName: 'Ramon',
     role: 'Fullstack developer',
-    lead: 'I build web systems end to end, from the database to the interface. For my thesis I went further: an app that announces nearby objects out loud to people who cannot see.',
+    lead: 'I build web systems end to end, from the database to the interface. I also have a strong interest in AI and mobile development.',
     ctaProjects: 'See projects',
     ctaContact: 'Get in touch',
     stackLabel: 'Main technologies',
@@ -184,7 +184,7 @@ const en: Copy = {
     photoAlt: 'Portrait of Breno Ramon smiling, wearing a black t-shirt and giving a thumbs up.',
     paragraphs: [
       'I hold a degree in Computer Science from UNIT in Aracaju (SE) and am currently pursuing a postgraduate degree in Data Analysis and Artificial Intelligence. My professional career began with a development internship at the Technology Department of the Sergipe Public Security Secretariat (SSP/SE); I was promoted to full-stack developer at Indra/Minsait in 2024 and became a Development Analyst at the same company in 2026.',
-      'In my day-to-day work, I use C#/.NET, Entity Framework, AngularJS, React, and SQL Server to maintain and enhance existing systems. Outside of work, I explore computer vision and mobile development; my capstone project, VozGuia, received a perfect score during its defense.',
+      'In my day-to-day work, I use C#/.NET, Entity Framework, AngularJS, React, and SQL Server to maintain and evolve existing systems. Outside of work, I explore computer vision and mobile development for instance, in my final-year project, an application called VozGuia, which leverages these technologies to assist visually impaired individuals in school and university environments.',
     ],
   },
   journey: {
